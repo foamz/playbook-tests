@@ -9,7 +9,8 @@
 
 - name: Start nginx
   hosts: all
-  service: 
-     name: nginx
-     enabled: yes
-     state: started
+  tasks:
+    service: 
+       name: nginx
+       enabled: yes
+       state: started
