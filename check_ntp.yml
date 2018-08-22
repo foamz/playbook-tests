@@ -1,5 +1,6 @@
 ---
 - name: check ntp service
+  hosts: all
   service: 
     name: ntpd
     state: started
