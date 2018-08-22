@@ -7,9 +7,9 @@
       name: nginx
       state: present
 
- - name: Start nginx
-   hosts: all
-   service: 
-      name: nginx
-      enabled: yes
-      state: started
+- name: Start nginx
+  hosts: all
+  service: 
+     name: nginx
+     enabled: yes
+     state: started
