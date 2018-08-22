@@ -1,0 +1,6 @@
+---
+- name: check ntp service
+  service: 
+    name: ntpd
+    state: started
+    enabled: yes
