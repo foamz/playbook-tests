@@ -1,5 +1,6 @@
 ---
 - name: install nginx
+  hosts: all
   yum: name=nginx state=present
 
 - name: Start Nginx
