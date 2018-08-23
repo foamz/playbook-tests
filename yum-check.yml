@@ -7,5 +7,5 @@
     yum: list=updates update_cache=true
     register: yumoutput
 
-  - debug: msg="{{ inventory_hostname}} {{ yumoutput.results|length }}"
+  - debug: msg="{{ inventory_hostname }} {{ yumoutput.results|length }}"
     when: yumoutput.results|length > 0
