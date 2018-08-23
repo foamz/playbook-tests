@@ -1,6 +1,11 @@
 ---
+- name: check for updates
   hosts: all
+  gather_facts: false
   tasks:
   - name: yum check for updates
     yum: list=updates update_cache=true
     register: yumoutput
+
+  - debug: msg="{{ inventory_hostname}} {{ yumoutput.results|length }}"
+    when: yumoutput.results|length > 0
